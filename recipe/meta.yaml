@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py>=314]
+  skip: true  # [win]
   script_env:
     - MPLBACKEND=agg
   script: {{ PYTHON }} -m pip install . -vv
@@ -24,18 +24,18 @@ requirements:
     - numpy
     - setuptools
     - cartopy
-    # Pin to ESMF 8.8.1 and xesmf 0.8.8 to avoid import errors
-    - esmf =8.8.1
-    - esmpy =8.8.1
-    - xesmf =0.8.8
+    # Pin to ESMF 8.9.1 and xesmf 0.9.2 to avoid import errors
+    - esmf =8.9.1
+    - esmpy =8.9.1
+    - xesmf =0.9.2
   run:
     - python
     - cartopy
     - cf_xarray
     - dask
-    # Pin to ESMF 8.8.1 to avoid import errors
-    - esmf =8.8.1
-    - esmpy =8.8.1
+    # Pin to ESMF 8.9.1 to avoid import errors
+    - esmf =8.9.1
+    - esmpy =8.9.1
     - gridspec
     - joblib
     - matplotlib-base
@@ -53,16 +53,16 @@ requirements:
     - tabulate
     - tk
     - xarray
-    # Pin to xesmf 0.8.8 to avoid import errors
-    - xesmf =0.8.8
+    # Pin to xesmf 0.9.2 to avoid import errors
+    - xesmf =0.9.2
 
 test:
   imports:
     - gcpy
   requires:
-    - esmf =8.8.1
-    - esmpy =8.8.1
-    - xesmf =0.8.8
+    - esmf =8.9.1
+    - esmpy =8.9.1
+    - xesmf =0.9.2
 
 about:
   home: https://github.com/geoschem/gcpy
